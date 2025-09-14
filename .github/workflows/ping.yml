@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl the site
-        run: curl -s -o /dev/null -w "%{http_code}\n" https://fortnitetracker.com/profile/all/theoukǃ
+        run: curl -A "Mozilla/5.0" -s -o /dev/null -w "%{http_code}\n" https://fortnitetracker.com/profile/all/theoukǃ
