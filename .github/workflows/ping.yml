@@ -1,0 +1,13 @@
+name: Hourly Pinger
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # runs every hour (UTC)
+  workflow_dispatch:       # lets you trigger it manually too
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl the site
+        run: curl -s -o /dev/null -w "%{http_code}\n" https://fortnitetracker.com/profile/all/theoukǃ
